@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  botpress:
+    image: multiklife/botpress2:local
+    build: .
+    ports:
+      - "3000:3000"  # Панель управления Botpress
+      - "5000:5000"  # Порты для взаимодействия с API
+    volumes:
+      - ./botpress_data:/botpress/data
